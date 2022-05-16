@@ -4,7 +4,9 @@ pipeline{
     stages{
         stage('Lint Checks') {
             steps{
-            sh ''
+            sh '''
+            ~/node_modules/jslint/bin/jslint.js server.js
+            '''
             }
         }
     }
