@@ -7,12 +7,9 @@ pipeline{
         stage('Lint Checks') {
             steps{
               script{
-                sample.info('Starting', 'google.com')
+                nodejs.LintChecks()
             }
-            sh '''
-                //~/node_modules/jslint/bin/jslint.js server.js
-              echo Link checks
-            '''
+
             }
         }
     }
